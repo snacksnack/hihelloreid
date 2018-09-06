@@ -9,7 +9,8 @@ class Contact < ActiveRecord::Base
 
   validates :email, format: { with: VALID_EMAIL_REGEX },
                     length: { maximum: 50 },
-                    presence: true
+                    presence: true,
+                    uniqueness: true
   validates :name,    presence: true, length: { maximum: 50 }
   validates :subject, presence: true, length: { maximum: 50 }
   validates :message, presence: true, length: { maximum: 500 }
@@ -22,7 +23,7 @@ class ReidOnePage < Sinatra::Base
 
   configure do
     Pony.options = {
-      :via => smtp,
+      :via => 'smtp',
       :via_options => {
         :address => 'smpt.sendgrid.net',
         :port => 587,
@@ -47,6 +48,16 @@ class ReidOnePage < Sinatra::Base
     else
       flash.now[:message] = "Oops, something's wrong with your form submission."
     end
+
+    send_mail(@contact)
   end
 
+  def send_mail(contact)
+    Pony.mail(
+      :from => contact.name + '<' + contact.email + '>',
+      :to => 'hihelloreid@gmail.com',
+      :subject => 'new hihelloreid contact',
+      :body => contact.message
+    )
+  end
 end
