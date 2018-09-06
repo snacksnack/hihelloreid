@@ -1,0 +1,1722 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : DuezaThemes
+Template Name: APPLICANT - Personal CV/Resume Template
+Version      : 1.0
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL CSS STYLE
+* 02.PRELOADER & BOUNCE CCS STYLE
+* 03.HOMEPAGE CSS STYLE
+* 04.ABOUT CSS STYLE
+* 05.SKILLS CSS STYLE
+* 06.EXPERIENCE CSS STYLE
+* 07.EDUCATION CSS STYLE
+* 08.SERVICE CSS STYLE
+* 09.CALL TO ACTION US CSS STYLE
+* 10.PORTFOLIO CSS STYLE
+* 11.INTEREST CSS STYLE
+* 12.REFERENCES CSS STYLE
+* 13.PRICING CSS STYLE
+* 14.NEWS LETTER CSS STYLE
+* 15.BLOG CSS STYLE
+* 16.CONTACT CSS STYLE
+* 17.FOOTER CSS STYLE
+* 18.SINGLE BLOG PAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+body {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 1px;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	background: #fff;
+	color: #333;
+}
+
+html,
+body {
+	height: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.4s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	font-family: "Montserrat", sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+p {
+	line-height: 32px;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	border: 0 none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.no-padding {
+	padding: 0
+}
+
+.section-padding {
+	padding-top: 70px;
+	padding-bottom: 78px;
+}
+
+.section-title {
+	margin-bottom: 30px;
+}
+
+.section-title h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	font-weight: 700;
+	position: relative;
+}
+
+.section-title h2:before {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 40px;
+	height: 2px;
+	width: 100px;
+	background: #000;
+	margin-left: -50px;
+}
+
+.section-title h2:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50px;
+	height: 2px;
+	width: 50px;
+	background: #000;
+	margin-left: -25px;
+}
+
+.section-short-desc {
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+.section-title p {
+	font-weight: 300;
+}
+
+.white-title{
+	color: #fff;
+}
+
+a.read-more {
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+	background: #ef3b29;
+	padding: 10px 25px;
+	border: 1px solid #333;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+a.white-read-more {
+	margin-top: 20px;
+	display: inline-block;
+	color: #333;
+	background: #fff;
+	padding: 10px 25px;
+	border: 1px solid #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+a.read-more:hover {
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+	border: 1px solid #ef3b29;
+	background: transparent;
+}
+
+a.white-read-more:hover {
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.scrollup {
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	font-size: 30px;
+	color: #333;
+	text-align: center;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	line-height: 55px;
+	cursor: pointer;
+	display: none;
+	z-index: 2;
+}
+
+.scrollup:hover {
+	box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.PRELOADER & BOUNCE CCS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.preloader {
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99999;
+}
+
+.status-mes {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+	font-size: 10px;
+	text-indent: -12345px;
+	border-top: 2px solid rgba(0, 0, 0, 0.08);
+	border-right: 2px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+	border-left: 2px solid #000;
+	border-radius: 50%;
+	-webkit-animation: spinner 700ms infinite linear;
+	animation: spinner 700ms infinite linear;
+	z-index: 10000;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.welcome-area {
+	height: 100%;
+}
+
+.welcome-image-area {
+	position: relative;
+	height: 100%;
+	background: url(/img/bg/dumbo_red.jpg);
+	background-size: cover;
+	z-index: 1;
+}
+
+.welcome-image-area:after {
+	position: absolute;
+	background: rgba(0, 0, 0, .3);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: -1;
+}
+
+.display-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.display-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.header-text {
+	margin-top: 60px;
+}
+
+.header-text h2 {
+	color: #fff;
+	font-size: 50px;
+	letter-spacing: 5px;
+	margin: 0;
+	font-weight: 900;
+}
+
+.header-text p {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 12px;
+	background: #ef3b29;
+	display: inline-block;
+	padding: 4px 10px;
+	font-weight: 900;
+	margin-bottom: 30px;
+	text-indent: 4px;
+}
+
+.social-links {
+	margin-top: 20px;
+}
+.social-links ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.social-links ul li {
+	display: inline-block;
+	margin: 0px 5px;
+}
+.social-links ul li a {
+	display: block;
+	color: #fff;
+	border: 1px solid #ef3b29;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+}
+.social-links ul li a:hover {
+	color: #ef3b29;
+}
+
+a.hire-btn {
+	margin-top: 40px;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 1px solid #ef3b29;
+	margin-right: 10px;
+	background: #ef3b29;
+}
+
+a.hire-btn:hover {
+	border: 1px solid #ef3b29;
+	background: transparent;
+	color: #fff;
+}
+
+.header-top-area {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+.logo {
+	padding-top: 18px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.logo a {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 10px;
+}
+
+.logo img {
+	width: 40px;
+}
+
+.mainmenu .navbar-nav li a {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 30px 15px;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.mainmenu .navbar-nav li a:hover {
+	background: none;
+	color: #ef3b29;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+	background: none;
+	color: #ef3b29;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navbar {
+	margin: 0;
+}
+
+.menu-bg {
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	background: #000;
+}
+
+.menu-bg .logo {
+	padding-top: 14px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.menu-bg .mainmenu .navbar-nav li a {
+	color: #fff;
+	padding: 20px 15px;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.menu-bg .mainmenu .navbar-nav li.active a {
+	color: #ef3b29;
+}
+
+.menu-bg .mainmenu .navbar-nav li a:hover {
+	background: none;
+	color: #ef3b29;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navbar-nav li.active a {
+	color: #ef3b29;
+}
+
+a.slide-btn {
+	margin: 0px 5px;
+	display: inline-block;
+	color: #333;
+	background: #fff;
+	padding: 10px 25px;
+	border: 1px solid rgba(255, 255, 255, .5);
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+a.slide-btn:hover {
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* HOMEPAGE SLIDER BACKGROUND CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.welcome-area,
+.welcome-slider-area,
+.welcome-slider-area div {
+	height: 100%;
+}
+
+.welcome-slider-area div.single-slide-item-tablecell,
+.welcome-slider-area div.single-slide-item-tablecell div {
+	height: auto;
+}
+
+.single-slide-item-table {
+	display: table;
+	width: 100%;
+}
+
+.single-slide-item-tablecell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.single-slide-item {
+	position: relative;
+	z-index: 1;
+}
+
+.single-slide-item:after {
+	position: absolute;
+	background: rgba(0, 0, 0, .8);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: -1;
+}
+
+.slide-1 {
+	background: url(../images/bg/slide-1.jpg) scroll 0 0;
+	background-size: cover;
+}
+
+.slide-2 {
+	background: url(../images/bg/slide-2.jpg) scroll 0 0;
+	background-size: cover;
+}
+
+.slide-3 {
+	background: url(../images/bg/slide-3.jpg) scroll 0 0;
+	background-size: cover;
+}
+
+.carousel-fade .carousel-inner .item {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* VIDEO BACKGROUND CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.welcome-video-area {
+	position: relative;
+	height: 100%;
+	background-size: cover;
+	z-index: 1;
+	background-position: center center;
+}
+
+.welcome-video-area:after {
+	position: absolute;
+	background: rgba(0, 0, 0, .5);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: -1;
+}
+
+.display-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.display-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.about-us-area {}
+
+.block-text-skill > p {
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.65em;
+	text-align: justify;
+}
+
+.download-btn {
+	background: #ef3b29 !important;
+	color: #fff !important;
+	border: 1px solid #ef3b29 !important;
+	margin-top: 10px !important;
+}
+
+.download-btn:hover {
+	background: transparent !important;
+	color: #000 !important;
+}
+
+ul.self-information {
+	border: 5px dotted #ef3b29;
+	list-style: outside none none;
+	margin: 30px 0 0;
+	padding: 20px 60px 13px;
+}
+
+ul.self-information li {
+	margin-bottom: 8px;
+}
+
+ul.self-information li span.title {
+	font-size: 14px;
+	font-weight: 700;
+	margin-right: 10px;
+}
+
+ul.self-information li span.self-content {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+ul.self-information li span.self-content a {
+	font-family: "Lato",sans-serif;
+	color: #000;
+}
+
+.about-image,
+.about-video {
+	margin-top: 30px;
+	padding: 10px;
+}
+
+.about-text {
+	margin-top: 30px;
+}
+
+.about-text h2 {
+	margin-bottom: 18px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+.about-text h2 span {
+	color: #000;
+}
+
+.about-text p {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.single-project-complete {
+	margin-top: 50px;
+}
+
+.single-project-complete {
+	background: #f9f9f9;
+	padding: 25px;
+	text-align: center;
+	position: relative;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-project-complete:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.single-project-complete span {
+	color: #ef3b29;
+	font-size: 50px;
+}
+
+.single-project-complete h2 {
+	font-size: 20px;
+	margin: 20px 0px;
+	font-weight: 400;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.SKILLS CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.my-skill-area {}
+.our-skill {
+	margin-top: 30px;
+}
+.progress-bar-text span {
+	float: right
+}
+.progress-bar-text {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 3px;
+	font-family: 'Dosis', sans-serif;
+}
+.progress-bar {
+	background: #ccc none repeat scroll 0 0;
+	box-shadow: 0 0 0;
+	height: 2px;
+	margin: 0 0 20px;
+	position: relative;
+	width: 100%;
+}
+.last-skill-item {
+	margin: 0 0 0px !important;
+}
+.progress-bar > span {
+	background: #ef3b29 none repeat scroll 0 0;
+	display: block;
+	height: 100%;
+	width: 0;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.EXPERIENCE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.experiences-area {}
+
+.single-experence {
+	background: #f9f9f9 none repeat scroll 0 0;
+	padding: 25px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-experence:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.single-experence span.icon {
+	color: #ef3b29;
+	font-size: 50px;
+}
+
+.single-experence h2 {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 20px 0;
+}
+
+.single-experence .text-box h3 {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 1.5em;
+	margin-top: 22px;
+}
+
+.single-experence .text-box h4 {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	padding-bottom: 2px;
+}
+
+.text-box p {
+	letter-spacing: 0;
+	line-height: 1.5em;
+}
+
+p.short-des {
+	padding-bottom: 10px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.EDUCATION CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.education-area {}
+
+.single-education {
+	background: #f9f9f9 none repeat scroll 0 0;
+	padding: 25px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-education:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.single-education span.icon {
+	color: #ef3b29;
+	font-size: 50px;
+}
+
+.single-education h2 {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 20px 0;
+}
+
+.single-education .text-box h3 {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 1.5em;
+	margin-top: 22px;
+}
+
+.single-education .text-box h4 {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	padding-bottom: 2px;
+}
+
+.text-box p {
+	letter-spacing: 0;
+	line-height: 1.5em;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.SERVICE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.service-area {}
+
+.single-service {
+	background: #f9f9f9 none repeat scroll 0 0;
+	padding: 25px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-service:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.single-service span.icon {
+	color: #ef3b29;
+	font-size: 50px;
+}
+
+.single-service h2 {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 20px 0;
+}
+
+.single-service .text-box h3 {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 1.5em;
+	margin-top: 22px;
+}
+
+.single-service .text-box h4 {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	padding-bottom: 2px;
+}
+
+.text-box p {
+	letter-spacing: 0;
+	line-height: 1.5em;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.CALL TO ACTION US CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.call-to-action-area {
+	padding: 100px 0px;
+	background: url(../images/bg/testi-bg.jpg);
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+.call-to-action-area:after {
+	position: absolute;
+	background: rgba(0, 0, 0, .7);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: -1;
+}
+
+.call-to-action-area h2{
+	color: #fff;
+}
+
+.call-to-action-area p{
+	color: #fff;
+}
+
+.purchase-now {
+	margin-top: 20px;
+	display: inline-block;
+	color: #333;
+	background: #fff;
+	padding: 10px 25px;
+	border: 1px solid rgba(255, 255, 255, .5);
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.purchase-now:hover {
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 10.PORTFOLIO CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.work {}
+
+.work-inner .mix {
+	display: none;
+}
+
+ul.work {
+	padding: 0;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 8px;
+	text-align: left;
+	text-align: center;
+}
+
+ul.work li {
+	display: inline-block;
+	padding: 8px 12px;
+	margin: 0 8px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	color: #333;
+	border: 1px solid #ef3b29;
+	cursor: pointer;
+	font-size: 12px;
+	letter-spacing: 3px;
+}
+
+ul.work li:hover {
+	color: #fff;
+	border: 1px solid #ef3b29;
+	background: #ef3b29;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+ul.work li.active {
+	color: #fff;
+	border: 1px solid #ef3b29;
+	background: #ef3b29;
+}
+
+.work .item {
+	margin-top: 30px;
+	position: relative;
+}
+
+.work .item img {
+	width: 100%;
+}
+
+.item {
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.item:hover {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.item .tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: #ef3b29;
+	text-align: center;
+	z-index: 1;
+}
+
+.item .align {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.carousel-indicators a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	margin-right: 5px;
+	text-align: center;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-ms-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+.tooltip a {
+	border: 1px solid #fff;
+	padding: 10px 15px;
+	color: #fff;
+}
+
+.tooltip a.work-popup {
+	margin-left: 10px;
+}
+
+.item:hover .tooltip {
+	opacity: 1;
+}
+
+.item h3 {
+	margin-top: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11.INTEREST CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.interest-area {}
+
+.single-interest-content {
+	background: #f9f9f9 none repeat scroll 0 0;
+	padding: 25px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-interest-content:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.single-interest-content span.fa {
+	color: #ef3b29;
+	font-size: 50px;
+}
+
+.single-interest-content h6 {
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	margin-top: 22px;
+	padding-bottom: 2px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12.REFERENCES CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.white-title h2::before {
+	background: #fff none repeat scroll 0 0;
+	content: "";
+	height: 2px;
+	left: 50%;
+	margin-left: -50px;
+	position: absolute;
+	top: 40px;
+	width: 100px;
+}
+
+.white-title h2::after {
+	background: #fff none repeat scroll 0 0;
+	content: "";
+	height: 2px;
+	left: 50%;
+	margin-left: -25px;
+	position: absolute;
+	top: 50px;
+	width: 50px;
+}
+
+.reference-area {
+	background: url(../images/bg/testi-bg.jpg);
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+.reference-area:after {
+	position: absolute;
+	background: rgba(0, 0, 0, .7);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: -1;
+}
+
+.reference-list {
+	padding: 15px 30px 0;
+}
+
+.single-reference img {
+	border-radius: 50%;
+	width: 120px;
+}
+
+.single-reference {
+	color: #fff;
+}
+
+.single-reference h6 {
+	margin-top: 20px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.single-reference h6.text-muted {
+	color: #ef3b29;
+}
+
+.owl-theme .owl-controls {
+	margin-top: 10px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);
+	opacity: .5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	background: none;
+}
+
+.buyer-rating {
+	padding-top: 7px;
+}
+
+.buyer-rating ul li {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.buyer-rating ul li a i {
+	color: #ef3b29;
+	font-size: 16px;
+}
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 15.BLOG CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.blog-area {}
+
+.blog-area .section-title {
+	margin-bottom: 70px;
+}
+
+.blog-image, .entry-post {
+	position: relative;
+}
+
+.blog-image .time {
+	background-color: #ef3b29;
+	bottom: 50%;
+	color: #fff;
+	left: 0;
+	max-width: 85px;
+	padding: 15px;
+	position: absolute;
+	text-align: center;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.entry-header:hover .time {
+	bottom: 0;
+	margin-bottom: 0;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.blog-image .time span {
+	font-size: 18px;
+}
+
+.blog-image .time h2 {
+	line-height: 24px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.single-blog {
+	background: #f9f9f9;
+	padding-bottom: 25px;
+	position: relative;
+	top: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.07, 0.25, 0.93) 0s;
+}
+
+.single-blog:hover {
+	box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.15);
+	top: -7px;
+}
+
+.blog-description h4 {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin: 20px 0px;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+.blog-description h6 {
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+}
+
+.blog-description h6 i {
+	color: #ef3b29;
+}
+
+.blog-description a {
+	display: inline-block;
+	background: #ef3b29;
+	color: #fff;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 1px solid #ef3b29;
+	margin-top: 20px;
+}
+.blog-description a:hover {
+	background: transparent;
+	border: 1px solid #ef3b29;
+	color: #000;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 16.CONTACT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.contact-form p {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 3px;
+	margin: 0;
+}
+
+.form-control {
+	display: block;
+	border: 0px;
+	width: 100%;
+	height: 45px;
+	padding: 5px 0px;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #333;
+	background-color: #fff;
+	background-image: none;
+	box-shadow: none;
+	text-indent: 10px;
+	border: 1px solid rgba(51, 51, 51, .5);
+	border-radius: 0 !important;
+}
+
+.form-control:focus {
+	border-color: #ef3b29;
+	outline: 0;
+	box-shadow: none;
+}
+
+.contact-form-design-area{
+	margin-top: 30px;
+}
+
+.contact-form button {
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+	background: #ef3b29;
+	padding: 10px 25px;
+	border: 1px solid #ef3b29;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.contact-form button:hover {
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #333;
+	background: transparent;
+}
+
+.success {
+	/*background: #fff none repeat scroll 0 0;
+	color: #333;
+	font-weight: 700;
+	padding: 20px;
+	text-align: center; */
+
+	padding: 1em;
+	text-align: center;
+	margin-bottom: 0.75rem;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	color: #468847;
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 17.FOOTER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.footer-area {
+	background: #000;
+	padding: 50px 0 50px 0;
+}
+
+.footer-text h6 {
+	color: #f9f9f9;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: relative;
+}
+
+.footer-text h6:before {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 30px;
+	height: 2px;
+	width: 100px;
+	background: #f9f9f9;
+	margin-left: -50px;
+}
+
+.footer-text h6:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 40px;
+	height: 2px;
+	width: 50px;
+	background: #f9f9f9;
+	margin-left: -25px;
+}
+
+.footer-social-link {
+	margin-bottom: 20px;
+}
+
+.footer-social-link ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.footer-social-link ul li {
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+.footer-social-link ul li a {
+	display: block;
+	color: #f9f9f9;
+}
+
+.footer-social-link ul li a {
+	background: transparent;
+	border: 1px solid #ef3b29;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 40px;
+}
+
+.footer-social-link ul li a:hover {
+	color: #ef3b29;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 18.SINGLE BLOG PAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.single-blog-area{
+	background: #000;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.single-blogarea{
+	
+}
+
+.single-blog-heading h2 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.single-blog-heading h2:before {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 65px;
+	height: 2px;
+	width: 100px;
+	background: #f9f9f9;
+	margin-left: -50px;
+}
+
+.single-blog-heading h2:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 75px;
+	height: 2px;
+	width: 50px;
+	background: #f9f9f9;
+	margin-left: -25px;
+}
+
+.single-blog-heading-text h4 a {
+	color: #f8f8f8;
+}
+
+.comment-section {
+	margin-top: 30px;
+}
+
+.single-blog-details,
+.comment-section,
+.single-sidebar {
+	border-radius: 3px;
+	padding-top: 30px;
+}
+
+.search input {
+	border: 1px solid #e3e8f0;
+	box-shadow: none;
+	color: #333;
+	height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 10px;
+}
+
+.single-sidebar,
+.recent-single {
+	margin-bottom: 30px;
+}
+
+.recent-single a h4:hover, 
+.single-blog-details h3 a:hover{
+	color: #ef3b29;
+}
+
+.single-blog-details > h3{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.single-blog-details p, 
+.single-comment p {
+	text-align: left;
+}
+.single-blog-details p {
+	margin-top: 20px;
+	line-height: 28px;
+}
+
+.single-blog-details h4 {
+	margin: 20px 0px;
+}
+
+.single-blog-details h6 i,
+.recent-single h6 i,
+.categories ul li a i,
+.single-comment h6 i {
+	color: #ef3b29;
+}
+
+.blog-social-sharing-area {
+	margin-top: 20px;
+	padding: 10px 0;
+	display: block;
+	overflow: hidden;
+}
+
+.social-sharing-icon {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.social-sharing-icon ul {
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+
+.social-sharing-icon ul li {
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.social-sharing-icon ul li a, 
+.social-icon-left ul li a {
+	border: 1px solid #ef3b29;
+	color: #000;
+	font-family: "Lato",sans-serif;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.social-sharing-icon ul li a:hover {
+	color: #ef3b29;
+}
+
+.single-comment {
+	margin-bottom: 20px;
+}
+
+.single-comment img {
+	width: 120px;
+}
+
+.recent-single h4 {
+	color: #333;
+}
+
+.categories {}
+
+.categories ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.categories ul li {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.categories ul li a {
+	color: #333;
+}
+
+.categories ul li a:hover {
+	color: #ef3b29;
+}
+
+.contact-success {
+	padding: 1em;
+	margin-bottom: 0.75rem;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	color: #468847;
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+			border-radius: 4px;
+  }
+  
+  .contact-error {
+	padding: 1em;
+	margin-bottom: 0.75rem;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	color: #b94a48;
+	background-color: #f2dede;
+	border: 1px solid rgba(185, 74, 72, 0.3);
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+			border-radius: 4px;
+  }
