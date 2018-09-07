@@ -49,7 +49,7 @@ class ReidOnePage < Sinatra::Base
       flash.now[:message] = "Oops, something's wrong with your form submission."
     end
 
-    send_mail(@contact)
+    #send_mail(@contact)
   end
 
   def send_mail(contact)
