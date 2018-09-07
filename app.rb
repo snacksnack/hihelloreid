@@ -25,7 +25,7 @@ class ReidOnePage < Sinatra::Base
     Pony.options = {
       :via => 'smtp',
       :via_options => {
-        :address => 'smpt.sendgrid.net',
+        :address => 'smtp.sendgrid.net',
         :port => 587,
         :domain => 'hihelloreid.com',
         :user_name => ENV['SENDGRID_USERNAME'],
