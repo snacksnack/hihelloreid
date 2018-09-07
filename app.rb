@@ -40,16 +40,19 @@ class ReidOnePage < Sinatra::Base
     slim :'index'
   end
 
+  get '/.well-known/acme-challenge/2d1lSZhMT6I4sdQEA_Suv_pKH9vG8PISsCGQgRYPT2o' do
+    return "2d1lSZhMT6I4sdQEA_Suv_pKH9vG8PISsCGQgRYPT2o.nnCA1tSAOqqnvxpst5COtAJt3i9Fc3TbwRQfdGLSObU"
+  end
+
   post '/contact' do
     @contact = Contact.new(name: params[:name], email: params[:email],
                             subject: params[:subject], message: params[:message])
+    send_mail(@contact)
     if request.xhr? && @contact.save
       flash.now[:message] = "Thank you, I'll be in touch soon!"
     else
       flash.now[:message] = "Oops, something's wrong with your form submission."
     end
-
-    #send_mail(@contact)
   end
 
   def send_mail(contact)
