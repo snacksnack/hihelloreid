@@ -12,8 +12,6 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rack-flash3'
 gem 'pony'
-#gem 'sinatra-flash'
-#gem 'sinatra-redirect-with-flash'
 
 group :developent do
   gem 'sqlite3'
