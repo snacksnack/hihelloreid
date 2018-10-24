@@ -58,7 +58,7 @@ class ReidOnePage < Sinatra::Base
   def send_mail(contact)
     Pony.mail(
       :from => contact.name + '<' + contact.email + '>',
-      :to => 'hihelloreid@gmail.com',
+      :to => 'hire.reid.collins@gmail.com',
       :subject => 'new hihelloreid contact',
       :body => contact.message
     )

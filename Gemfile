@@ -13,10 +13,10 @@ gem 'sinatra-activerecord'
 gem 'rack-flash3'
 gem 'pony'
 
-#group :developent do
-#  gem 'sqlite3'
-#  gem 'tux'
-#end
+group :developent do
+  gem 'sqlite3'
+  gem 'tux'
+end
 
 group :production do
   gem 'pg'
