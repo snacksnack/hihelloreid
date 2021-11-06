@@ -12,7 +12,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rack-flash3'
 gem 'pony'
-gem 'mustermann', '1.1.1'
+gem 'mustermann', '~> 1.1'
 
 #group :developent do
 #  gem 'sqlite3'

@@ -54,7 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  mustermann (= 1.1.1)
+  mustermann (~> 1.1)
   pg
   pony
   rack-flash3
