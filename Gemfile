@@ -1,5 +1,5 @@
 source 'https://rubygems.org/'
-ruby '2.5.1'
+ruby '3.0.2'
 
 #require 'bundler/setup'
 
