@@ -34,6 +34,9 @@ GEM
       rack
     rake (13.0.6)
     ruby2_keywords (0.0.5)
+    ruby_http_client (3.5.2)
+    sendgrid-ruby (6.6.0)
+      ruby_http_client (~> 3.4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -63,6 +66,7 @@ DEPENDENCIES
   rack
   rack-flash3
   rake
+  sendgrid-ruby
   sinatra (~> 2.1.0)
   sinatra-activerecord
   slim

@@ -14,6 +14,7 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'rack-flash3'
 gem 'pony'
+gem 'sendgrid-ruby'
 gem 'mustermann', '~> 1.1'
 
 #group :development do
