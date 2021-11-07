@@ -1,3 +1,3 @@
 require './app'
-#run ReidOnePage.new
-run Sinatra::Application
+run ReidOnePage.new
+#run Sinatra::Application
