@@ -11,6 +11,12 @@ test:
   <<: *default
   database: db/hihelloreid_test
 
+production:
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
 #:development:
 #  adapter: sqlite3
 #  database: db/hihelloreid_development.sqlite3
