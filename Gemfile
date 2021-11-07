@@ -16,11 +16,13 @@ gem 'rack-flash3'
 gem 'pony'
 gem 'mustermann', '~> 1.1'
 
-group :developent do
-  gem 'sqlite3' #, '~> 1.3', '>= 1.3.6'
-  gem 'tux'
-end
+#group :development do
+#  gem 'sqlite3' #, '~> 1.3', '>= 1.3.6'
+#  gem 'tux'
+#end
 
-group :production do
-  gem 'pg'
-end
+#group :production do
+#  gem 'pg'
+#end
+
+gem 'pg'
