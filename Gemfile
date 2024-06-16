@@ -1,6 +1,6 @@
 source 'https://rubygems.org/'
 ruby '3.0.2'
-
+# jun 17
 #require 'bundler/setup'
 
 gem 'sinatra', '~> 2.1.0'
